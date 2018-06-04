@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<div class="container">
+<div class="grid">
+<div class="nav-wrap">
+
+    <div class="navs" ><a href="{{ url_for('index') }}">Home</a></div>
+    <div class="navs" ><a href="{{ url_for('blog') }}">Blog</a></div>
+    <div class="navs" ><a href="{{ url_for('connect')}}">Connect</a></div>
+    <div class="navs" ><a href="{{ url_for('gallery')}}">Gallery</a></div>
+</div>
+
+{% block content %}
+
+{% endblock %}
+
+<div class="bottom">
+    <div class="sal">Made with <i class="fas fa-heart"></i> using Flask </div>
+</div>
+
+ </div>
+</div>
+
+</html>
