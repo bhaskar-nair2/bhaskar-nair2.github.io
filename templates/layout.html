@@ -5,9 +5,11 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body onload="brython()">
 <div class="container">
 <div class="grid">
 <div class="nav-wrap">
@@ -21,12 +23,16 @@
 {% block content %}
 
 {% endblock %}
-
-<div class="bottom">
-    <div class="sal">Made with <i class="fas fa-heart"></i> using Flask </div>
-</div>
+<nav class="navbar navbar-default navbar-fixed-bottom bottom">
+  <div class="container">
+    <div class="sal">Made with <i class="fas fa-heart" id="heart"></i> using Flask </div>
+  </div>
+</nav>
 
  </div>
 </div>
 
+<script src="{{ url_for('static', filename='js/brython.js') }}"></script>
+
+</body>
 </html>
