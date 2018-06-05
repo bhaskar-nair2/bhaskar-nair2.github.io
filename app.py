@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import scrapper as sc
 
 app = Flask(__name__)
 
@@ -13,11 +14,11 @@ def blog():
 
 @app.route("/connect")
 def connect():
-    return render_template('contact.html')
+    return render_template('connect.html')
 
 @app.route("/gallery")
 def gallery():
-    return render_template('gallery.html')
+    return render_template('gallery.html',imgList=sc.imLS())
 
 @app.errorhandler(404)
 def er404(e):
