@@ -3,7 +3,6 @@ import scrapper as sc
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -24,5 +23,9 @@ def gallery():
 def er404(e):
     return render_template('error.html',error = '404')
 
+@app.errorhandler(500)
+def er500(e):
+    return render_template('error.html',error = '500')
+
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug = True,host='18.218.187.182',port=5000)
