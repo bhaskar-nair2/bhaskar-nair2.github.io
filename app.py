@@ -1,7 +1,17 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash
+from flask_mail import Mail,Message
 import scrapper as sc
 
+
 app = Flask(__name__)
+app.secret_key="mySecret"
+
+app.config['MAIL_SERVER'] = 'smtp.zoho.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_SSL'] = True
+app.config.from_pyfile('config.cfg')
+
+mail=Mail(app)
 
 @app.route('/')
 def index():
@@ -11,9 +21,15 @@ def index():
 def blog():
     return render_template('blog.html')
 
-@app.route("/connect")
+@app.route("/connect",methods=['GET','POST'])
 def connect():
-    return render_template('connect.html')
+    if request.method=='GET':
+        return render_template('connect.html')
+    if request.method=="POST":
+        msg=Message("Hello",[request.form['email']],"Thank you for contacting, I'll try to reply as son as possible",sender='bhaskar@optimuscp.io')
+        mail.send(msg)
+        flash('Mail Sent!!')
+        return render_template('connect.html')
 
 @app.route("/gallery")
 def gallery():
@@ -28,4 +44,4 @@ def er500(e):
     return render_template('error.html',error = '500')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(debug=True)

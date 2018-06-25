@@ -7,6 +7,14 @@ display: grid;
     grid-template-columns: [col1-st]1fr [col2-st]1fr [col3-st]1fr [col4-st]1fr;
 }
 
+@font-face {
+font-family: "Humnst777 Blk BT";
+src: url("../fonts/hum777k-webfont.ttf");
+src: url("../fonts/hum777k-webfont.woff") format("woff"),
+url("../fonts/hum777k-webfont.svg") format("svg"),
+url("../fonts/hum777k-webfont.eot") format("eot");
+}
+
 .name{
     grid-column: col2-st/ span 2;
     grid-row: row2-st;
@@ -22,12 +30,47 @@ display: grid;
 .gridBlog{
 
 }
-.frm{
-    grid-row: row-3st/ span all;
-    grid-column: col2-st/ span all;
+form{
+    grid-row: row3-st/ span 2;
+    grid-column: col2-st/ span 2;
     display: grid;
-    grid-template-rows: 200px 200px;
-    grid-template-columns: 100px;
+    grid-gap: 3vh;
+    grid-template-rows: [r1]4vh [r2]4vh [r3]20vh [butr]300px ;
+    grid-template-columns: [c1]1fr [c2]2fr
+
+}
+.l1{
+    grid-column: c1;
+    grid-row: r1;
+}
+.l2{
+    grid-column: c1;
+    grid-row: r2;
+}
+.l3{
+    grid-column: c1;
+    grid-row: r3;
+}
+
+.t1{
+    grid-column: c2;
+    grid-row: r1;
+}
+.t2{
+    grid-column: c2;
+    grid-row: r2;
+}
+.t3{
+    grid-column: c2;
+    grid-row: r3;
+}
+
+.but{
+    grid-row: butr;
+    grid-column: c1/ span 2;
+    justify-self: center;
+    width: 20vw;
+    height: 4vh;
 }
 
 .gridCon{
@@ -38,11 +81,11 @@ display: grid;
     grid-column: col1-st;
     display: grid;
     grid-gap: 5px;
-    grid-template-rows: repeat(auto-fit,1fr);
+    grid-template-rows: repeat(auto-fit,5vw);
     grid-template-columns: 1fr;
 }
 .navs{
-    font-family: "Humnst777 Blk BT";
+    font-family: "Humnst777 Blk BT", serif;
     font-size: 3vh;
     line-height: 10vh;
     text-decoration: underline;
@@ -77,16 +120,32 @@ body{
     background-color: #fdfdff;
 }
 .heads{
-    font-family: "Humnst777 Blk BT";
+    font-family: "Humnst777 Blk BT", serif;
     font-size: 13vh;
     color: #f89117;
 }
 .conte{
     grid-row: herew;
-    font-family: "Humnst777 Blk BT";
+    font-family: "Humnst777 Blk BT", serif;
     font-size: 4vh;
     color: #bfbfbf;
     align-self: start;
+}
+label{
+    font-family: "Humnst777 Blk BT", serif;
+    font-size: 2vh;
+}
+input{
+    font-family: "Humnst777 Blk BT", serif;
+    font-size: 2vh;
+}
+button{
+    font-family: "Humnst777 Blk BT", serif;
+    font-size: 2vh;
+}
+textarea{
+    font-family: "Humnst777 Blk BT", serif;
+    font-size: 2vh;
 }
 .sal{
     display: grid;

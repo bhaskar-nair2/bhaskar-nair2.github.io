@@ -43,8 +43,6 @@ def imLS():
 
     dat = re.findall(r'"src"\s*:\s*"(.+?)"', str(respData))
     #cap = re.findall(r'"text"\s*:\s*"(.+?)"', str(respData))
-    print(str(respData))
-    i = 0
     rec = []
     for x in dat:
         if re.search("/s640x640/", x):
