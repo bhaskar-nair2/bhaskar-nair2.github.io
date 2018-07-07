@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+    <form name="manage" method="post" action="{{ url_for('manage') }}">
+        <label for="user"></label>
+        <label for="pass"></label>
+        <input id="user" name="user">
+        <input id="pass" name="pass">
+    </form>
+
+{% endblock %}

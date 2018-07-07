@@ -4,10 +4,6 @@ import scrapper as sc
 
 application = Flask(__name__)
 application.secret_key = "mySecret"
-
-application.config['MAIL_SERVER'] = 'smtp.zoho.com'
-application.config['MAIL_PORT'] = 465
-application.config['MAIL_USE_SSL'] = True
 application.config.from_pyfile('config.cfg')
 
 mail = Mail(application)
@@ -39,6 +35,10 @@ def connect():
 def gallery():
     return render_template('gallery.html', imgList=sc.imLS())
 
+
+@application.route("/manage")
+def manage():
+    return render_template('manage.html')
 
 @application.errorhandler(404)
 def er404(e):
