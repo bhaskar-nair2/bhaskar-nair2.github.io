@@ -1,11 +1,15 @@
 {% extends 'layout.html' %}
-{% block body %}
-
+{% block content %}
+    <div class="heads name">Manage</div>
+{% if not val %}
     <form name="manage" method="post" action="{{ url_for('manage') }}">
-        <label for="user"></label>
-        <label for="pass"></label>
-        <input id="user" name="user">
-        <input id="pass" name="pass">
+        <label for="user" class="l1">Secret ID</label>
+        <label for="pass" class="l2">Password</label>
+        <input id="user" name="user" class="t1" required="required" placeholder="Secret ID">
+        <input id="pass" name="pass" class="t2" required="required" placeholder="SHA256">
+        <button class="btn btn-primary but2" type="submit">Send</button>
     </form>
+{% else %}
+{% endif %}
 
 {% endblock %}
