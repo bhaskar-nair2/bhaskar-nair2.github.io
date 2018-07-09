@@ -4,10 +4,10 @@ import scrapper as sc
 
 application = Flask(__name__)
 application.secret_key = "mySecret"
-
 application.config['MAIL_SERVER'] = 'smtp.zoho.com'
 application.config['MAIL_PORT'] = 465
 application.config['MAIL_USE_SSL'] = True
+application.config.from_pyfile('config.cfg')
 application.config.from_pyfile('config.cfg')
 
 mail = Mail(application)
@@ -25,19 +25,40 @@ def blog():
 
 @application.route("/connect", methods=['GET', 'POST'])
 def connect():
-    if request.method == 'GET':
-        return render_template('connect.html')
     if request.method == "POST":
         msg = Message("Hello", [request.form['email']],
-                      "Thank you for contacting, I'll try to reply as son as possible", sender='bhaskar@optimuscp.io')
+                      """
+                      Thank you for contacting me,
+                    
+                       I'll reply as soon as possible.
+                      
+                      
+                            ~Bhaskar Nair
+                      
+                      
+                      
+                    This is a system generated reply. 
+                    Please do not reply to this mail-ID as it goes to an unchecked mail box.
+                      
+                      
+                      
+                      """, sender='noreply@bhaskarnair.me')
         mail.send(msg)
         flash('Mail Sent!!')
-        return render_template('connect.html')
+    return render_template('connect.html')
 
 
 @application.route("/gallery")
 def gallery():
     return render_template('gallery.html', imgList=sc.imLS())
+
+
+@application.route("/manage",methods=["Get","POST"])
+def manage():
+    if request.method=='GET':
+        return render_template('manage.html', val=False)
+    if request.method=='POST':
+        return "Inside Panel"
 
 
 @application.errorhandler(404)
