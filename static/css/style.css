@@ -2,8 +2,8 @@
 
 .grid{
 display: grid;
-    grid-gap: 1vw;
-    grid-template-rows: [row1-st]2vh [row2-st]2fr [row3-st]minmax(200px,4fr) [row4-st]6vw [ende]2vh ;
+    grid-gap: 0;
+    grid-template-rows: [row1-st]2vh [row2-st]25vw [row3-st]minmax(200px,4fr) [row4-st]6vw [ende]2vh ;
     grid-template-columns: [col1-st]1fr [col2-st]1fr [col3-st]1fr [col4-st]1fr [col5-st]4vw [en]2vw;
 }
 
@@ -20,12 +20,12 @@ url("../fonts/hum777k-webfont.eot") format("eot");
 }
 
 .name{
-    grid-column: col2-st/ span 2;
+    grid-column: col2-st/ span 3;
     grid-row: row2-st;
     display: grid;
-    grid-template-rows: repeat(auto-fill, 1vw);
-}
-.heads{
+    height: min-content;
+    align-items: start;
+    justify-items: start;
     font-family: "Humnst777 Blk BT", serif;
     font-size: 13vh;
     color: #f89117;
@@ -43,6 +43,23 @@ url("../fonts/hum777k-webfont.eot") format("eot");
     font-size: 4vh;
     color: #bfbfbf;
     align-self: start;
+}
+
+.dets{
+    grid-column: col2-st/span 3;
+    grid-row: row3-st/span 1;
+    display: grid;
+    grid-template-rows:repeat(13,20px);
+    margin-bottom: 20px;
+}
+
+.detPoints{
+    font-family: "Humnst777 Blk BT";
+    font-size: 1.8vw;
+    color: #bfbfbf;
+}
+.detPoints.imp{
+    color: #337ab7;
 }
 
 .poem{
