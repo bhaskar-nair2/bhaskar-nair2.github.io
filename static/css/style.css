@@ -15,7 +15,7 @@ body{
     padding: 0 !important;
 }
 
-@media (max-aspect-ratio: 1/2) {
+@media (min-aspect-ratio: 1/2) {
     .cov {
         position: fixed;
         left: 0;
