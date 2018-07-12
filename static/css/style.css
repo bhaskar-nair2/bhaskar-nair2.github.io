@@ -15,7 +15,7 @@ body{
     padding: 0 !important;
 }
 
-@media (min-aspect-ratio: 1/2) {
+@media (max-width: 1023px) {
     .cov {
         position: fixed;
         left: 0;
@@ -42,7 +42,7 @@ body{
     }
 }
 
-@media (min-aspect-ratio: 1/2){
+@media (min-width: 1024px){
 .cov{
     display: none;
 }
@@ -68,7 +68,7 @@ display: grid;
 }
 .navs{
     font-family: "Humnst777 Blk BT", serif;
-    font-size: 3vh;
+    font-size: 2vw;
     line-height: 10vh;
     text-decoration: underline;
 }
