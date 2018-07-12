@@ -26,25 +26,28 @@ def blog():
 @application.route("/connect", methods=['GET', 'POST'])
 def connect():
     if request.method == "POST":
-        msg = Message("Hello", [request.form['email']],
-                      """
-                      Thank you for contacting me,
-                    
-                       I'll reply as soon as possible.
-                      
-                      
-                            ~Bhaskar Nair
-                      
-                      
-                      
-                    This is a system generated reply. 
-                    Please do not reply to this mail-ID as it goes to an unchecked mail box.
-                      
-                      
-                      
-                      """, sender='noreply@bhaskarnair.me')
-        mail.send(msg)
-        flash('Mail Sent!!')
+        if not (request.form['email'] == None and request.form['subject'] == None and request.form['content'] == None):
+            msg = Message("Hello", [request.form['email']],
+                          """
+                          Thank you for contacting me,
+                        
+                           I'll reply as soon as possible.
+                          
+                          
+                                ~Bhaskar Nair
+                          
+                          
+                          
+                        This is a system generated reply. 
+                        Please do not reply to this mail-ID as it goes to an unchecked mail box.
+                          
+                          
+                          
+                          """, sender='noreply@bhaskarnair.me')
+            mail.send(msg)
+            flash('Mail Sent!!')
+        else:
+            flash('Fields Empty')
     return render_template('connect.html')
 
 
@@ -53,11 +56,11 @@ def gallery():
     return render_template('gallery.html', imgList=sc.imLS())
 
 
-@application.route("/manage",methods=["Get","POST"])
+@application.route("/manage", methods=["Get", "POST"])
 def manage():
-    if request.method=='GET':
+    if request.method == 'GET':
         return render_template('manage.html', val=False)
-    if request.method=='POST':
+    if request.method == 'POST':
         return "Inside Panel"
 
 

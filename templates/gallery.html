@@ -1,15 +1,15 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <div class="heads name">Gallery</div>
+    <div class="name">Gallery</div>
 
     <div class="cont">
         <p class="conte">Just a few pics scrapped out from my <a href="https://www.instagram.com/bas_kar_na_yar/?hl=en" target="_blank">Instagram profile.</a><br>No API :'(</p>
     </div>
     <div class="galImg">
     {% for x in imgList %}
-
+        {% if loop.index<=8 %}
              <img class="gImg" src="{{ x }}">
-
+        {% endif %}
     {% endfor %}
     </div>
 {% endblock %}

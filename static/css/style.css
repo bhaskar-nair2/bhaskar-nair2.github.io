@@ -1,12 +1,4 @@
-/*layout starts*/
-
-.grid{
-display: grid;
-    grid-gap: 0;
-    grid-template-rows: [row1-st]2vh [row2-st]25vw [row3-st]minmax(200px,4fr) [row4-st]6vw [ende]2vh ;
-    grid-template-columns: [col1-st]1fr [col2-st]1fr [col3-st]1fr [col4-st]1fr [col5-st]4vw [en]2vw;
-}
-
+/*Core Components*/
 @font-face {
 font-family: "Humnst777 Blk BT";
 src: url("../fonts/hum777k-webfont.ttf");
@@ -18,19 +10,108 @@ url("../fonts/hum777k-webfont.eot") format("eot");
     font-family: "SF Burlington";
     src: url("../fonts/SFBurlingtonScript.ttf");
 }
+body{
+    background-color: #fdfdff;
+    padding: 0 !important;
+}
 
+@media (max-aspect-ratio: 1/2) {
+    .cov {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 80;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .cov {
+        display: block;
+        opacity: 2;
+        text-align: center;
+    }
+    .container{
+        display: none;
+    }
+    .rotText{
+        color: whitesmoke;
+        top:50%;
+        font-family: "Humnst777 Blk BT";
+        font-size: 3vw;
+    }
+}
+
+@media (min-aspect-ratio: 1/2){
+.cov{
+    display: none;
+}
+/*layout Components*/
+.grid{
+display: grid;
+    grid-gap: 0;
+    grid-template-rows: [row1-st]2vh [row2-st]25vw [row3-st]minmax(2vw,4fr) [row4-st]6vw [ende]2vh ;
+    grid-template-columns: [col1-st]1fr [col2-st]1fr [col3-st]1fr [col4-st]1fr [col5-st]4vw [en]2vw;
+}
+.container{
+    padding-left: 15vw;
+    padding-right: 5vw;
+    width: auto;
+}
+.nav-wrap{
+    grid-row: row2-st;
+    grid-column: col1-st;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: repeat(auto-fit,5vw);
+    grid-template-columns: 1fr;
+}
+.navs{
+    font-family: "Humnst777 Blk BT", serif;
+    font-size: 3vh;
+    line-height: 10vh;
+    text-decoration: underline;
+}
+.bottom{
+    grid-row: ende / span all;
+    grid-column: col1-st / span all;
+    border-top: 3px solid black;
+}
+.sal{
+    display: grid;
+    grid-template-rows: [dalo] minmax(30px, 1fr);
+    grid-template-columns: [hee]3fr repeat(10,1fr);
+    padding: 0;
+    padding-left: 4vw;
+}
+.salx{
+    grid-row: dalo;
+    grid-column: hee;
+    align-self: end;
+
+}
+#heart{
+    color: #dd0000;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+    0%,
+    100% {transform: scale(1)}
+    50% {transform: scale(1.2)}
+}
+/*Multiuse Components*/
 .name{
     grid-column: col2-st/ span 3;
     grid-row: row2-st;
     display: grid;
     height: min-content;
+    width: min-content;
     align-items: start;
     justify-items: start;
     font-family: "Humnst777 Blk BT", serif;
-    font-size: 13vh;
+    font-size: 8vw;
     color: #f89117;
 }
-
 .cont{
     grid-row: row2-st;
     grid-column: col2-st/ span all;
@@ -45,6 +126,7 @@ url("../fonts/hum777k-webfont.eot") format("eot");
     align-self: start;
 }
 
+/*Index Components*/
 .dets{
     grid-column: col2-st/span 3;
     grid-row: row3-st/span 1;
@@ -54,14 +136,13 @@ url("../fonts/hum777k-webfont.eot") format("eot");
 }
 
 .detPoints{
-    font-family: "Humnst777 Blk BT";
-    font-size: 1.8vw;
+    font-family: "Humnst777 Blk BT", serif;
+    font-size: 1.3vw;
     color: #bfbfbf;
 }
 .detPoints.imp{
     color: #337ab7;
 }
-
 .poem{
     height: fit-content;
     grid-row:row3-st / span 1;
@@ -81,9 +162,9 @@ url("../fonts/hum777k-webfont.eot") format("eot");
     align-self: start;
 }
 
-.gridBlog{
+/*Blog Components*/
 
-}
+/*Connect Components*/
 form{
     grid-row: row3-st/ span 2;
     grid-column: col2-st/ span 2;
@@ -92,6 +173,22 @@ form{
     grid-template-rows: [r1]4vh [r2]4vh [r3]20vh [butr]300px ;
     grid-template-columns: [c1]1fr [c2]2fr
 
+}
+label{
+    font-family: "Humnst777 Blk BT", serif;
+    font-size: 2vh;
+}
+input{
+    font-family: "Humnst777 Blk BT", serif;
+    font-size: 2vh;
+}
+button{
+    font-family: "Humnst777 Blk BT", serif;
+    font-size: 2vh;
+}
+textarea{
+    font-family: "Humnst777 Blk BT", serif;
+    font-size: 2vh;
 }
 .l1{
     grid-column: c1;
@@ -126,6 +223,7 @@ form{
     width: 20vw;
     height: 4vh;
 }
+/*Manage Components*/
 .but2{
     grid-row: r3;
     grid-column: c1/ span 2;
@@ -133,30 +231,7 @@ form{
     width: 20vw;
     height: 4vh;
 }
-
-.gridCon{
-
-}
-.nav-wrap{
-    grid-row: row2-st;
-    grid-column: col1-st;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-rows: repeat(auto-fit,5vw);
-    grid-template-columns: 1fr;
-}
-.navs{
-    font-family: "Humnst777 Blk BT", serif;
-    font-size: 3vh;
-    line-height: 10vh;
-    text-decoration: underline;
-}
-
-.bottom{
-    grid-row: ende / span all;
-    grid-column: col1-st / span all;
-    border-top: 3px solid black;
-}
+/*Gallery Components*/
 .galImg{
     grid-column: col2-st/ span all;
     grid-row: row3-st/ span 2;
@@ -175,57 +250,4 @@ form{
     transform: scale(1.1);
     filter: grayscale(0%);
 }
-
-/*layout ends*/
-/*design starts*/
-body{
-    background-color: #fdfdff;
-    padding: 0 !important;
 }
-
-.container{
-    padding-left: 15vw;
-    padding-right: 5vw;
-    width: auto;
-}
-
-label{
-    font-family: "Humnst777 Blk BT", serif;
-    font-size: 2vh;
-}
-input{
-    font-family: "Humnst777 Blk BT", serif;
-    font-size: 2vh;
-}
-button{
-    font-family: "Humnst777 Blk BT", serif;
-    font-size: 2vh;
-}
-textarea{
-    font-family: "Humnst777 Blk BT", serif;
-    font-size: 2vh;
-}
-.sal{
-    display: grid;
-    grid-template-rows: [dalo] minmax(30px, 1fr);
-    grid-template-columns: [hee]3fr repeat(10,1fr);
-    padding: 0;
-    padding-left: 4vw;
-}
-.salx{
-    grid-row: dalo;
-    grid-column: hee;
-    align-self: end;
-
-}
-
-#heart{
-    color: #dd0000;
-    animation: pulse 1.5s ease-in-out infinite;
-}
-@keyframes pulse {
-    0%,
-    100% {transform: scale(1)}
-    50% {transform: scale(1.2)}
-}
-/*design ends*/

@@ -4,6 +4,6 @@
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
-venv/*
-.idea/*
+venv/
+.idea/
 
