@@ -1,9 +1,10 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <div class="heads name">Connect</div>
+    <div class="name">Connect</div>
 
     <div class="cont">
-        <p class="conte">Need a <a href="#">crazy website</a>? A quick <a href="https://github.com/bhaskar-nair2">software</a> solution.. Or just wanna grab <a href="https://www.baskinrobbinsindia.com/" target="_blank">ice-cream</a>?<br>Drop me a message!</p>
+        <p class="conte">Need a <a href="#">crazy website</a>? A quick <a href="https://github.com/bhaskar-nair2">software</a> solution..
+            Or just wanna grab <a href="https://www.baskinrobbinsindia.com/" target="_blank">ice-cream</a>?<br>Drop me a message!</p>
     </div>
 
     <form name="connect" method="post" action="{{ url_for('connect') }}">

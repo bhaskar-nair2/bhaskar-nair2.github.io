@@ -22,5 +22,3 @@ def imLS():
         if re.search("/s640x640/", x):
             rec.append(x)
     return rec
-
-# cap = re.findall(r'"text"\s*:\s*"(.+?)"', str(respData))

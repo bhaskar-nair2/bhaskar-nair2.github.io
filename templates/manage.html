@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block content %}
-    <div class="heads name">Manage</div>
+    <div class="name">Manage</div>
 {% if not val %}
     <form name="manage" method="post" action="{{ url_for('manage') }}">
         <label for="user" class="l1">Secret ID</label>
