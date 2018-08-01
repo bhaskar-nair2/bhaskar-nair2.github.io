@@ -28,9 +28,6 @@ def blog():
 def connect():
     if request.method == "POST":
         if not (request.form['email'] is None and request.form['subject'] is None and request.form['content'] is None):
-
-            # msgme = Message(subject=request.form['email'], recipients='bhaskar@optimuscp.io',body=request.form['content'], html=request.form['subject'], sender='noreply@bhaskarnair.me')
-
             mail.sendThanks(request.form)
             mail.sendMe(request.form)
             flash('Mail Sent!!')
