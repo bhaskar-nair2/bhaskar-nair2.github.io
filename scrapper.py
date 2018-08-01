@@ -30,7 +30,7 @@ def getPosts():
     con = sql.Connection('static/blog')
     cur = con.cursor()
     lst = []
-    rs = cur.execute('select * from blog order by data desc')
+    rs = cur.execute('select * from blog order by id')
     for i in rs:
         lst.append(i)
     return lst
