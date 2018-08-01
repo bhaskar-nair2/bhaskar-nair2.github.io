@@ -21,7 +21,8 @@ def index():
 
 @application.route("/blog")
 def blog():
-    return render_template('blog.html')
+    print(sc.getPosts())
+    return render_template('blog.html', posts=sc.getPosts())
 
 
 @application.route("/connect", methods=['GET', 'POST'])
