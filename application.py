@@ -21,8 +21,10 @@ def index():
 
 @application.route("/blog")
 def blog():
-    print(sc.getPosts())
     return render_template('blog.html', posts=sc.getPosts())
+
+
+# TODO: Add a blog uploader here, password protected
 
 
 @application.route("/connect", methods=['GET', 'POST'])
