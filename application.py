@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, flash
+import ssl
 from saveMail import Mailer
 import scrapper as sc
 
@@ -19,16 +20,16 @@ def index():
     return render_template('index.html')
 
 
-@application.route("/blog")
-def blog():
-    return render_template('blog.html', posts=sc.getPosts())
+@application.route("/oeuvre")
+def oeuvre():
+    return render_template('writings.html', posts=sc.getPosts())
 
 
 # TODO: Add a blog uploader here, password protected
 
 
-@application.route("/connect", methods=['GET', 'POST'])
-def connect():
+@application.route("/mingle", methods=['GET', 'POST'])
+def mingle():
     if request.method == "POST":
         if not (request.form['email'] is None and request.form['subject'] is None and request.form['content'] is None):
             mail.sendThanks(request.form)
@@ -39,8 +40,8 @@ def connect():
     return render_template('connect.html')
 
 
-@application.route("/gallery")
-def gallery():
+@application.route("/exhibit")
+def exhibit():
     return render_template('gallery.html', imgList=sc.imLS())
 
 
@@ -63,4 +64,6 @@ def er500(e):
 
 
 if __name__ == '__main__':
-    application.run(host='0.0.0.0')
+    cert = ('sslforfree/certificate.crt', 'sslforfree/private.key')
+    ctx = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
+    application.run(ssl_context='adhoc')
