@@ -20,8 +20,8 @@ def index():
     return render_template('index.html')
 
 
-@application.route("/oeuvre")
-def oeuvre():
+@application.route("/writings")
+def writings():
     return render_template('writings.html', posts=sc.getPosts())
 
 
