@@ -64,6 +64,4 @@ def er500(e):
 
 
 if __name__ == '__main__':
-    cert = ('sslforfree/certificate.crt', 'sslforfree/private.key')
-    ctx = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
-    application.run(ssl_context='adhoc')
+    application.run()
