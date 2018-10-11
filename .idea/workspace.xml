@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5170316-1d6a-4d73-a5c0-2067543a0a08" name="Default" comment="New commits">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c5170316-1d6a-4d73-a5c0-2067543a0a08" name="Default" comment="New commits" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +34,7 @@
     <session id="-1245073735">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.6" value="1" />
@@ -51,7 +49,7 @@
           <entry key="html" value="11" />
           <entry key="key" value="1" />
           <entry key="pem" value="1" />
-          <entry key="py" value="9" />
+          <entry key="py" value="10" />
           <entry key="rnc" value="4" />
           <entry key="sql" value="1" />
         </counts>
@@ -61,7 +59,7 @@
           <entry key="CSS" value="2" />
           <entry key="HTML" value="11" />
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="9" />
+          <entry key="Python" value="10" />
           <entry key="RNG Compact" value="4" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -73,7 +71,7 @@
           <entry key="css" value="329" />
           <entry key="dummy" value="9" />
           <entry key="html" value="1100" />
-          <entry key="py" value="953" />
+          <entry key="py" value="1018" />
           <entry key="sql" value="847" />
         </counts>
       </usages-collector>
@@ -82,7 +80,7 @@
           <entry key="CSS" value="329" />
           <entry key="HTML" value="1100" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="1021" />
+          <entry key="Python" value="1086" />
           <entry key="Scratch" value="865" />
         </counts>
       </usages-collector>
@@ -90,11 +88,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="1005">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -103,9 +101,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
+            <state relative-caret-position="435">
               <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding>
                 <element signature="e#960#966#0#HTML" expanded="true" />
@@ -241,6 +248,7 @@
         <option value="$PROJECT_DIR$/templates/layout.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/application.py" />
+        <option value="$PROJECT_DIR$/wsgi.py" />
       </list>
     </option>
   </component>
@@ -525,6 +533,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2246818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -721,23 +730,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-          <folding>
-            <element signature="e#960#966#0#HTML" expanded="true" />
-            <element signature="e#1285#1291#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="1005">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <element signature="e#960#966#0#HTML" expanded="true" />
+            <element signature="e#1285#1291#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
