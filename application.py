@@ -3,7 +3,7 @@ import ssl
 from saveMail import Mailer
 import scrapper as sc
 
-## EB Container: flask-env
+# EB Container: flask-env
 
 application = Flask(__name__)
 application.secret_key = "mySecret"
@@ -45,7 +45,12 @@ def exhibit():
     return render_template('gallery.html', imgList=sc.imLS())
 
 
-@application.route("/manage", methods=["Get", "POST"])
+@application.route("/resume")
+def resume():
+    return render_template('resume.html')
+
+
+@application.route("/manage", methods=["GET", "POST"])
 def manage():
     if request.method == 'GET':
         return render_template('manage.html', val=False)
@@ -64,4 +69,4 @@ def er500(e):
 
 
 if __name__ == '__main__':
-    application.run()
+    application.run(debug=True)
