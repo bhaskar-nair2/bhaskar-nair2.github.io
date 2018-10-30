@@ -1,0 +1,100 @@
+body,
+html {
+  margin: 0%;
+  background-color: #454545;
+}
+
+body .resume_holder,
+html .resume_holder {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "res" "links";
+  -ms-grid-rows: 60rem 20rem;
+      grid-template-rows: 60rem 20rem;
+  width: 100%;
+}
+
+@media (min-width: 1000px) {
+  body .resume_holder,
+  html .resume_holder {
+        grid-template-areas: ".. res links";
+    -ms-grid-columns: 20vw 50vw 20vw;
+        grid-template-columns: 20vw 50vw 20vw;
+    -ms-grid-rows: 100vh;
+        grid-template-rows: 100vh;
+  }
+}
+
+body .resume_holder img,
+html .resume_holder img {
+  width: 80%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: res;
+}
+
+@media (min-width: 1000px) {
+  body .resume_holder img,
+  html .resume_holder img {
+    width: unset;
+    height: 95%;
+  }
+}
+
+body .resume_holder .links,
+html .resume_holder .links {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: links;
+  grid-gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+@media (min-width: 1000px) {
+  body .resume_holder .links,
+  html .resume_holder .links {
+    -ms-grid-rows: 25vh (100px)[4];
+        grid-template-rows: 25vh repeat(4, 100px);
+    grid-auto-flow: row;
+    grid-gap: unset;
+  }
+}
+
+body .resume_holder .links h1,
+html .resume_holder .links h1 {
+  display: none;
+  color: whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@media (min-width: 1000px) {
+  body .resume_holder .links h1,
+  html .resume_holder .links h1 {
+    display: block;
+  }
+}
+
+body .resume_holder .links a,
+html .resume_holder .links a {
+  color: whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+}
+
+body .resume_holder .links a:hover,
+html .resume_holder .links a:hover {
+  color: wheat;
+}
+/*# sourceMappingURL=resume.css.map */

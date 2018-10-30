@@ -1,0 +1,72 @@
+$desktop: 1000px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+
+body,
+html {
+    margin: 0%;
+    background-color: #454545;
+
+    .resume_holder {
+        display: grid;
+        grid-template-areas: "res""links";
+        grid-template-rows: 60rem 20rem;
+        width: 100%;
+
+        @include desktop {
+            grid-template-areas: ".. res links";
+            grid-template-columns: 20vw 50vw 20vw;
+            grid-template-rows: 100vh;
+
+        }
+
+        img {
+            width: 80%;
+            align-self: center;
+            justify-self: center;
+            grid-area: res;
+
+            @include desktop {
+                width: unset;
+                height: 95%;
+            }
+        }
+
+        .links {
+            display: grid;
+            grid-auto-flow: column;
+            grid-area: links;
+            grid-gap: 1rem;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            @include desktop {
+                grid-template-rows: 25vh repeat(4,100px);
+                grid-auto-flow: row;
+                grid-gap: unset;
+            }
+            h1{
+                display: none;
+                color: whitesmoke;
+                font-family: 'Courier New', Courier, monospace;
+                @include desktop(){
+                    display: block;
+                }
+            }
+            a {
+                color: whitesmoke;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 1.2rem;
+                &:hover{
+                    color: wheat;
+                }
+            }
+        }
+
+    }
+}
