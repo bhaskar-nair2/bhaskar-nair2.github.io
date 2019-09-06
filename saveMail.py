@@ -8,8 +8,7 @@ class Mailer:
     def sendThanks(self, form):
         msg = Message("Hello",
                       [form['email']],
-                      html=
-                      """
+                      html="""
                      <h2> Thank you for contacting me,<br>
 
                        I'll reply as soon as possible.<br><br>
