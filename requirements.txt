@@ -6,7 +6,7 @@ Flask-PyMongo==2.0.1
 gitdb2==2.0.5
 gunicorn==19.9.0
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 MarkupSafe==1.0
 pbr==5.4.3
 pycodestyle==2.5.0
